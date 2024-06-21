@@ -19,7 +19,7 @@ const options = {
       movies.getFirstMovie().id = parameters.id;
       return Promise.resolve({ description: `Movie with ID ${parameters.id} added!` });
     }
-  }
+  },
 };
 
 const verifier = new Verifier(options);
