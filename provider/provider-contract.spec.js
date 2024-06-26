@@ -21,15 +21,11 @@ const options = {
       return Promise.resolve({ description: `Movie with ID ${parameters.id} added!` });
     },
     'an existing movie exists': (parameters) => {
-      movies.insertMovie(parameters.id, parameters.name, parameters.year);
+      movies.insertMovie(parameters);
       return Promise.resolve({ description: 'Movie added!' });
     },
-    'a request to delete a movie that exists': (parameters) => {
-      movies.insertMovie(parameters.id, parameters.name, parameters.year);
-      return Promise.resolve({ description: 'Movie added!' });
-    }
-  },
-};
+  }
+}
 
 const verifier = new Verifier(options);
 
